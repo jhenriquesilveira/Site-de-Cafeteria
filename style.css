@@ -56,7 +56,8 @@ section{
 
 .navbar a:hover{
     color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
+    box-shadow: inset 0 -2px var(--main-color);
+    /* border-bottom: 0.1rem solid var(--main-color); */
     padding-bottom: 0.5rem;
     font-size: 2rem;
 }
@@ -149,4 +150,47 @@ about .row .content p{
     color: #fff;
     padding: 1rem 0;
     line-height: 1.8;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box{
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+}
+
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover{
+    background-color: #fff;    
+}
+
+.menu .box-container .box:hover>*{
+    color: var(--black);
 }
